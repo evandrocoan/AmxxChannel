@@ -26,8 +26,8 @@ def plugin_loaded() :
     install_setting_file( "Diff", "Context.sublime-menu" )
 
 def install_setting_file( package_name, target_file_name ):
-    target_directory = sublime.packages_path()
-    target_file      = os.path.join( target_directory, package_name, target_file_name )
+    target_directory = os.path.join( sublime.packages_path(), package_name )
+    target_file      = os.path.join( target_directory, target_file_name )
 
     attempt_to_install_file( target_directory, target_file, "\n[\n\n]\n" )
 
