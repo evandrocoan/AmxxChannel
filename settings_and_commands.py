@@ -135,7 +135,7 @@ def add_channel():
         Add your channel URL to the Package Control channel list and cleans the cached channels.
     """
     package_control    = "Package Control.sublime-settings"
-    channel_url = g_channel_settings['CHANNEL_URL']
+    channel_url = g_channel_settings['CHANNEL_FILE_URL']
 
     package_control_settings = sublime.load_settings( package_control )
     channels                 = package_control_settings.get( "channels", [] )
