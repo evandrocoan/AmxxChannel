@@ -108,12 +108,15 @@ def plugin_loaded():
 
 
     # You can specify for some packages to be popped out from the list and being installed by
-    # last in the following order presented.
+    # last/first in the following order presented.
+    g_channel_settings['PACKAGES_TO_INSTALL_FIRST'] = \
+    [
+        "Notepad++ Color Scheme",
+    ]
+
     g_channel_settings['PACKAGES_TO_INSTALL_LAST'] = \
     [
-        "My Package Penultimate Package",
-        "My Package Penult Package",
-        "My Package Last Package",
+        "Default",
     ]
 
     # The default user preferences file
@@ -122,11 +125,29 @@ def plugin_loaded():
     # Do not try to install this own package and the Package Control, as they are currently running
     g_channel_settings['PACKAGES_TO_NOT_INSTALL'] = [ "Package Control", CURRENT_PACKAGE_NAME ]
 
-    # The files of the `Default.sublime-package` you are installed
+    # The files of the `Default.sublime-package` you are installing
     g_channel_settings['DEFAULT_PACKAGES_FILES'] = \
     [
-        "Tab Context.sublime-menu",
+        ".gitignore",
+        ".no-sublime-package",
         "Context.sublime-menu",
+        "Default (Linux).sublime-keymap",
+        "Default (Linux).sublime-mousemap",
+        "Default (OSX).sublime-keymap",
+        "Default (OSX).sublime-mousemap",
+        "Default (Windows).sublime-keymap",
+        "Default (Windows).sublime-mousemap",
+        "Distraction Free.sublime-settings",
+        "Find Results.hidden-tmLanguage",
+        "install_package_control.py",
+        "Preferences (Linux).sublime-settings",
+        "Preferences (OSX).sublime-settings",
+        "Preferences (Windows).sublime-settings",
+        "Preferences.sublime-settings",
+        "README.md",
+        "Sublime Text Settings.sublime-settings",
+        "Tab Context.sublime-menu",
+        "transpose.py",
     ]
 
 
