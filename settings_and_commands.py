@@ -43,7 +43,7 @@ except ImportError:
 
 from ChannelManager.channel_manager import main as manager_main
 from ChannelManager.submodules_manager import main as submodules_main
-from ChannelManager.copy_default_package import main as default_main
+from ChannelManager.copy_default_package import main as copy_default_main
 
 
 # Infer the correct package name and current directory absolute path
@@ -215,6 +215,6 @@ class AmxxChannelUpdateDefaultPackages( sublime_plugin.ApplicationCommand ):
 
     def run(self):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        default_main( g_channel_settings['DEFAULT_PACKAGES_FILES'], True )
+        copy_default_main( g_channel_settings['DEFAULT_PACKAGES_FILES'], True )
 
 
