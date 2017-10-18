@@ -61,18 +61,18 @@ def plugin_loaded():
     global g_channel_settings
 
     # The folder where the directory where the Sublime Text `Packages` (loose packages) folder is on
-    STUDIO_MAIN_DIRECTORY = get_main_directory( CURRENT_DIRECTORY )
+    CHANNEL_MAIN_DIRECTORY = get_main_directory( CURRENT_DIRECTORY )
 
     # The folder where the User settings are on
-    USER_FOLDER_PATH = os.path.join( STUDIO_MAIN_DIRECTORY, "Packages", "User" )
+    USER_FOLDER_PATH = os.path.join( CHANNEL_MAIN_DIRECTORY, "Packages", "User" )
 
     # The temporary folder to download the main repository when installing the development version
-    g_channel_settings['TEMPORARY_FOLDER_TO_USE'] = "__channel_studio_temp"
-    g_channel_settings['STUDIO_PACKAGE_NAME']     = CURRENT_PACKAGE_NAME
+    g_channel_settings['TEMPORARY_FOLDER_TO_USE'] = "__channel_temporary_directory"
+    g_channel_settings['CHANNEL_PACKAGE_NAME']    = CURRENT_PACKAGE_NAME
 
     # Where to save the settings for channel after it is installed on the user's machine
-    g_channel_settings['USER_FOLDER_PATH']             = USER_FOLDER_PATH
-    g_channel_settings['STUDIO_INSTALLATION_SETTINGS'] = \
+    g_channel_settings['USER_FOLDER_PATH']              = USER_FOLDER_PATH
+    g_channel_settings['CHANNEL_INSTALLATION_SETTINGS'] = \
             os.path.join( USER_FOLDER_PATH,CURRENT_PACKAGE_NAME + ".sublime-settings" )
 
 
@@ -83,26 +83,26 @@ def plugin_loaded():
     # The default Package Control channel
     g_channel_settings['DEFAULT_CHANNEL_URL'] = "https://packagecontrol.io/channel_v3.json"
 
-    # The URL of the folder where the channel files are hosted
-    STUDIO_RAW_URL = "https://raw.githubusercontent.com/your_user_name/MyBrandNewChannel/master/"
+    # The URL of the directory where the files `channel.json` and `repository.json` are hosted
+    CHANNEL_RAW_URL = "https://raw.githubusercontent.com/evandrocoan/SublimeStudioChannel/master/"
 
     # The URL to the main A direct URL/Path to the repository where there is the `.gitmodules` file
     # listing all the channel packages to use when generating Studio Channel files.
-    g_channel_settings['STUDIO_MAIN_URL']       = "https://github.com/your_user_name/MyParentRepository"
-    g_channel_settings['STUDIO_MAIN_DIRECTORY'] = STUDIO_MAIN_DIRECTORY
+    g_channel_settings['CHANNEL_ROOT_URL']       = "https://github.com/evandrocoan/SublimeTextAmxxSimpleIDE"
+    g_channel_settings['CHANNEL_ROOT_DIRECTORY'] = CHANNEL_MAIN_DIRECTORY
 
     # The file path to the Channel File `channel.json` to use when installing the development version
-    g_channel_settings['STUDIO_CHANNEL_URL']  = clean_urljoin( STUDIO_RAW_URL, "channel.json" )
-    g_channel_settings['STUDIO_CHANNEL_FILE'] = os.path.join( CURRENT_DIRECTORY, "channel.json" )
+    g_channel_settings['CHANNEL_FILE_URL']  = clean_urljoin( CHANNEL_RAW_URL, "channel.json" )
+    g_channel_settings['CHANNEL_FILE_PATH'] = os.path.join( CURRENT_DIRECTORY, "channel.json" )
 
     # A direct URL/Path to the Repository File `repository.json` to use when installing the
     # stable/development version
-    g_channel_settings['STUDIO_REPOSITORY_URL']  = clean_urljoin( STUDIO_RAW_URL, "repository.json" )
-    g_channel_settings['STUDIO_REPOSITORY_FILE'] = os.path.join( CURRENT_DIRECTORY, "repository.json" )
+    g_channel_settings['CHANNEL_REPOSITORY_URL']  = clean_urljoin( CHANNEL_RAW_URL, "repository.json" )
+    g_channel_settings['CHANNEL_REPOSITORY_FILE'] = os.path.join( CURRENT_DIRECTORY, "repository.json" )
 
     # A direct URL/Path to the `settings.json` to use when installing the stable/development version
-    g_channel_settings['STUDIO_SETTINGS_URL']  = clean_urljoin( STUDIO_RAW_URL, "settings.json" )
-    g_channel_settings['STUDIO_SETTINGS_PATH'] = os.path.join( CURRENT_DIRECTORY, "settings.json" )
+    g_channel_settings['CHANNEL_SETTINGS_URL']  = clean_urljoin( CHANNEL_RAW_URL, "settings.json" )
+    g_channel_settings['CHANNEL_SETTINGS_PATH'] = os.path.join( CURRENT_DIRECTORY, "settings.json" )
 
 
     # You can specify for some packages to be popped out from the list and being installed by
@@ -128,20 +128,20 @@ def plugin_loaded():
     ]
 
 
-def add_studio_channel():
+def add_channel():
     """
         Add your channel URL to the Package Control channel list and cleans the cached channels.
     """
     package_control    = "Package Control.sublime-settings"
-    studio_channel_url = g_channel_settings['STUDIO_CHANNEL_URL']
+    channel_url = g_channel_settings['CHANNEL_URL']
 
     package_control_settings = sublime.load_settings( package_control )
     channels                 = package_control_settings.get( "channels", [] )
 
-    if studio_channel_url in channels:
-        channels.remove( studio_channel_url )
+    if channel_url in channels:
+        channels.remove( channel_url )
 
-    channels.insert( 0, studio_channel_url )
+    channels.insert( 0, channel_url )
     package_control_settings.set( "channels", channels )
 
     print( "Adding %s channel to %s: %s" % ( CURRENT_PACKAGE_NAME, package_control, str( channels ) ) )
@@ -150,7 +150,7 @@ def add_studio_channel():
     clear_cache()
 
 
-class MyBrandNewChannelRunInstallation( sublime_plugin.ApplicationCommand ):
+class AmxxChannelRunInstallation( sublime_plugin.ApplicationCommand ):
 
     def run(self, version="stable"):
         """
@@ -159,35 +159,35 @@ class MyBrandNewChannelRunInstallation( sublime_plugin.ApplicationCommand ):
             @param version   Either the value "stable" or "development" to install the
                              Development or Stable Version of the channel.
         """
-        add_studio_channel()
+        add_channel()
         g_channel_settings['INSTALLATION_TYPE'] = version
 
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
         channel_installer.main( g_channel_settings )
 
 
-class MyBrandNewChannelRunUninstallation( sublime_plugin.ApplicationCommand ):
+class AmxxChannelRunUninstallation( sublime_plugin.ApplicationCommand ):
 
     def run(self):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
         channel_uninstaller.main( g_channel_settings )
 
 
-class MyBrandNewChannelGenerateChannelFile( sublime_plugin.ApplicationCommand ):
+class AmxxChannelGenerateChannelFile( sublime_plugin.ApplicationCommand ):
 
     def run(self):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
         manager_main( g_channel_settings )
 
 
-class MyBrandNewChannelRun( sublime_plugin.ApplicationCommand ):
+class AmxxChannelRun( sublime_plugin.ApplicationCommand ):
 
     def run(self, run):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
         submodules_main( run )
 
 
-class MyBrandNewChannelUpdateDefaultPackages( sublime_plugin.ApplicationCommand ):
+class AmxxChannelUpdateDefaultPackages( sublime_plugin.ApplicationCommand ):
 
     def run(self):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
