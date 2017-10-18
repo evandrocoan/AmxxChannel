@@ -25,7 +25,9 @@
 #
 
 import os
+
 import sublime
+import sublime_plugin
 
 from ChannelManager.channel_utilities import clean_urljoin
 from ChannelManager.channel_utilities import get_main_directory
