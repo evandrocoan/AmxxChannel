@@ -1,0 +1,19 @@
+[
+    { "caption": "Amxx Channel: Generate Channel File",
+            "command": "my_brand_new_channel_generate_channel_file" },
+
+    { "caption": "Amxx Channel: Run Backstroke Requests",
+            "command": "my_brand_new_channel_run", "args": {"run": "-b"} },
+
+    { "caption": "Amxx Channel: Pull & Rebase all Packages",
+            "command": "my_brand_new_channel_run", "args": {"run": "-p"} },
+
+    { "caption": "Amxx Channel: Update Default Packages",
+            "command": "my_brand_new_channel_update_default_packages" },
+
+    { "caption": "Amxx Channel: Run Installation Stable",
+            "command": "my_brand_new_channel_run_installation", "args": {"version": "stable"} },
+
+    { "caption": "Amxx Channel: Run Installation Development",
+            "command": "my_brand_new_channel_run_installation", "args": {"version": "development"} },
+]
