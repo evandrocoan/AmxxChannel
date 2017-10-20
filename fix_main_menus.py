@@ -4,6 +4,7 @@ import sublime
 import sublime_plugin
 
 import os
+from OverrideUnpackedPackages.override_unpacked_packages import add_folder_to_processing_queue
 
 """
 
@@ -21,23 +22,14 @@ As they were moved into the Custom Settings package.
 
 """
 
+CURRENT_DIRECTORY = os.path.dirname( os.path.realpath( __file__ ) )
+
+
 def plugin_loaded() :
-    install_setting_file( "amxmodx", "Main.sublime-menu" )
-    install_setting_file( "Diff", "Context.sublime-menu" )
+    add_files_to_copy_list()
 
-def install_setting_file( package_name, target_file_name ):
-    target_directory = os.path.join( sublime.packages_path(), package_name )
-    target_file      = os.path.join( target_directory, target_file_name )
-
-    attempt_to_install_file( target_directory, target_file, "\n[\n\n]\n" )
-
-def attempt_to_install_file( target_directory, target_file, input_file_string ):
-
-    if not os.path.exists( target_directory ):
-        os.makedirs( target_directory )
-
-    text_file = open( target_file, "w" )
-    text_file.write( input_file_string )
-    text_file.close()
+def add_files_to_copy_list():
+    target_directory = os.path.join( CURRENT_DIRECTORY, "amxmodx" )
+    add_folder_to_processing_queue( target_directory, 100 )
 
 
