@@ -28,8 +28,9 @@ CURRENT_DIRECTORY = os.path.dirname( os.path.realpath( __file__ ) )
 def plugin_loaded() :
     add_files_to_copy_list()
 
+
 def add_files_to_copy_list():
-    target_directory = os.path.join( CURRENT_DIRECTORY, "amxmodx" )
-    add_folder_to_processing_queue( target_directory, 100 )
+    add_folder_to_processing_queue( os.path.join( CURRENT_DIRECTORY, "amxmodx" ), 100 )
+    add_folder_to_processing_queue( os.path.join( CURRENT_DIRECTORY, "Default" ), 100 )
 
 
