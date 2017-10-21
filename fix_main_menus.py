@@ -25,12 +25,11 @@ As they were moved into the Custom Settings package.
 CURRENT_DIRECTORY = os.path.dirname( os.path.realpath( __file__ ) )
 
 
-def plugin_loaded() :
+def plugin_loaded():
     add_files_to_copy_list()
 
 
 def add_files_to_copy_list():
-    add_folder_to_processing_queue( os.path.join( CURRENT_DIRECTORY, "amxmodx" ), 100 )
-    add_folder_to_processing_queue( os.path.join( CURRENT_DIRECTORY, "Default" ), 100 )
+    add_folder_to_processing_queue( CURRENT_DIRECTORY, "Default", 100 )
 
 
