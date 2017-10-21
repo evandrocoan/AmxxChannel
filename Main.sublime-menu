@@ -1,0 +1,51 @@
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "Amxx Channel",
+                        "children":
+                        [
+                            // { "caption": "Amxx Channel: Generate Channel File",
+                            //         "command": "amxx_channel_generate_channel_file",
+                            //         "args": {"create_tags": false} },
+
+                            // { "caption": "Amxx Channel: Generate Channel File and Tags",
+                            //         "command": "amxx_channel_generate_channel_file",
+                            //         "args": {"create_tags": true} },
+
+                            // { "caption": "Amxx Channel: Run Backstroke Requests",
+                            //         "command": "amxx_channel_run", "args": {"run": "-b"} },
+
+                            // { "caption": "Amxx Channel: Pull & Rebase all Packages",
+                            //         "command": "amxx_channel_run", "args": {"run": "-p"} },
+
+                            // { "caption": "Amxx Channel: Update Default Packages",
+                            //         "command": "amxx_channel_update_default_packages" },
+
+                            { "caption": "Amxx Channel: Run Stable Installation ",
+                                    "command": "amxx_channel_run_installation",
+                                    "args": {"version": "stable"} },
+
+                            // { "caption": "Amxx Channel: Run Development Installation",
+                            //         "command": "amxx_channel_run_installation",
+                            //         "args": {"version": "development"} },
+
+                            { "caption": "Amxx Channel: Run Uninstallation",
+                                    "command": "amxx_channel_run_uninstallation" },
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
