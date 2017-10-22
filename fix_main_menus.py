@@ -37,10 +37,13 @@ CURRENT_DIRECTORY = os.path.dirname( os.path.realpath( __file__ ) )
 
 
 def plugin_loaded():
-    add_files_to_copy_list()
+    sublime.set_timeout( add_files_to_copy_list, 2000 )
 
 
 def add_files_to_copy_list():
-    add_folder_to_processing_queue( CURRENT_DIRECTORY, "Default", 100 )
+    from .settings_and_commands import is_channel_installed
+
+    if is_channel_installed():
+        add_folder_to_processing_queue( CURRENT_DIRECTORY, "Default", 100 )
 
 
