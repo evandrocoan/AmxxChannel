@@ -135,8 +135,15 @@ def plugin_loaded():
     # The default user preferences file
     g_channel_settings['USER_SETTINGS_FILE'] = "Preferences.sublime-settings"
 
-    # Do not try to install this own package and the Package Control, as they are currently running
-    g_channel_settings['PACKAGES_TO_NOT_INSTALL'] = [ "Package Control", CURRENT_PACKAGE_NAME ]
+    # Packages which you do want to install on the Stable or Development version, when reading
+    # the `.gitmodules` packages list.
+    g_channel_settings['PACKAGES_TO_NOT_INSTALL_STABLE'] = \
+    [
+    ]
+
+    g_channel_settings['PACKAGES_TO_NOT_INSTALL_DEVELOPMENT'] = \
+    [
+    ]
 
     # The files of the `Default.sublime-package` you are installing
     g_channel_settings['DEFAULT_PACKAGES_FILES'] = \
