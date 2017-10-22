@@ -11,6 +11,12 @@ try:
 except ImportError as error:
     print( "Error: Could not import the package `OverrideUnpackedPackages`, please install the package." + str( error ) )
 
+    def add_folder_to_processing_queue(*args):
+        print( "fix_main_menus, add_folder_to_processing_queue could not add the following arguments..." )
+
+        for arg in args:
+            print( str( arg ) )
+
 """
 
 # Fix Main Menus
