@@ -117,6 +117,19 @@ def plugin_loaded():
     g_channel_settings['PACKAGES_TO_INSTALL_LAST'] = \
     [
         "Default",
+        "PackagesManager",
+    ]
+
+    # Packages which are not allowed to be selected by the user while choosing the packages to not
+    # be installed. Useful for packages which are required for the channel maintainability.
+    g_channel_settings['FORBIDDEN_PACKAGES'] = \
+    [
+        "PackagesManager",
+        "ChannelManager",
+        "Notepad++ Color Scheme",
+        "OverrideUnpackedPackages",
+        "amxmodx",
+        "AmxxPawn",
     ]
 
     # The default user preferences file
@@ -199,9 +212,9 @@ class AmxxChannelRunUninstallation( sublime_plugin.ApplicationCommand ):
 
 class AmxxChannelGenerateChannelFile( sublime_plugin.ApplicationCommand ):
 
-    def run(self):
+    def run(self, create_tags, command="all"):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        manager_main( g_channel_settings )
+        manager_main( g_channel_settings, create_tags, command )
 
 
 class AmxxChannelRun( sublime_plugin.ApplicationCommand ):

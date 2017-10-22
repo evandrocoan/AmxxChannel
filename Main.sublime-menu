@@ -23,6 +23,10 @@
                             //         "command": "amxx_channel_generate_channel_file",
                             //         "args": {"create_tags": true} },
 
+                            // { "caption": "Amxx Channel: Select Package to Update Git Tag",
+                            //         "command": "amxx_channel_generate_channel_file",
+                            //         "args": { "create_tags": true, "command": "git_tag" } },
+
                             // { "caption": "Amxx Channel: Run Backstroke Requests",
                             //         "command": "amxx_channel_run", "args": {"run": "-b"} },
 
