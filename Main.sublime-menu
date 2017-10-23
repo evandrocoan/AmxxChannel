@@ -15,36 +15,36 @@
                         "caption": "Amxx Channel",
                         "children":
                         [
-                            // { "caption": "Amxx Channel: Generate Channel File",
+                            // { "caption": "Generate Channel File",
                             //         "command": "amxx_channel_generate_channel_file",
                             //         "args": {"create_tags": false} },
 
-                            // { "caption": "Amxx Channel: Generate Channel File and Tags",
+                            // { "caption": "Generate Channel File and Tags",
                             //         "command": "amxx_channel_generate_channel_file",
                             //         "args": {"create_tags": true} },
 
-                            // { "caption": "Amxx Channel: Select Package to Update Git Tag",
+                            // { "caption": "Select Package to Update Git Tag",
                             //         "command": "amxx_channel_generate_channel_file",
                             //         "args": { "create_tags": true, "command": "git_tag" } },
 
-                            // { "caption": "Amxx Channel: Run Backstroke Requests",
+                            // { "caption": "Run Backstroke Requests",
                             //         "command": "amxx_channel_run", "args": {"run": "-b"} },
 
-                            // { "caption": "Amxx Channel: Pull & Rebase all Packages",
+                            // { "caption": "Pull & Rebase all Packages",
                             //         "command": "amxx_channel_run", "args": {"run": "-p"} },
 
-                            // { "caption": "Amxx Channel: Update Default Packages",
+                            // { "caption": "Update Default Packages",
                             //         "command": "amxx_channel_update_default_packages" },
 
-                            { "caption": "Amxx Channel: Run Stable Installation ",
+                            { "caption": "Run Stable Installation ",
                                     "command": "amxx_channel_run_installation",
                                     "args": {"version": "stable"} },
 
-                            // { "caption": "Amxx Channel: Run Development Installation",
+                            // { "caption": "Run Development Installation",
                             //         "command": "amxx_channel_run_installation",
                             //         "args": {"version": "development"} },
 
-                            { "caption": "Amxx Channel: Run Uninstallation",
+                            { "caption": "Run Uninstallation",
                                     "command": "amxx_channel_run_uninstallation" },
                         ]
                     }
