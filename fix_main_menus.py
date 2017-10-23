@@ -44,6 +44,6 @@ def add_files_to_copy_list():
     from .settings_and_commands import is_channel_installed
 
     if is_channel_installed():
-        add_folder_to_processing_queue( CURRENT_DIRECTORY, "Default", 100 )
+        add_folder_to_processing_queue( CURRENT_DIRECTORY, os.path.join( "User", "Amxx" ), 100 )
 
 
