@@ -32,13 +32,13 @@ import os
 import sublime
 import sublime_plugin
 
-from ChannelManager.channel_utilities import clean_urljoin
-from ChannelManager.channel_utilities import load_data_file
-from ChannelManager.channel_utilities import get_main_directory
-from ChannelManager.channel_utilities import get_dictionary_key
+from channel_manager.channel_utilities import clean_urljoin
+from channel_manager.channel_utilities import load_data_file
+from channel_manager.channel_utilities import get_main_directory
+from channel_manager.channel_utilities import get_dictionary_key
 
-from ChannelManager import channel_installer
-from ChannelManager import channel_uninstaller
+from channel_manager import channel_installer
+from channel_manager import channel_uninstaller
 
 try:
     from package_control.package_manager import clear_cache
@@ -46,9 +46,9 @@ try:
 except ImportError:
     pass
 
-from ChannelManager.channel_manager import main as manager_main
-from ChannelManager.submodules_manager import main as submodules_main
-from ChannelManager.copy_default_package import main as copy_default_main
+from channel_manager.channel_manager import main as manager_main
+from channel_manager.submodules_manager import main as submodules_main
+from channel_manager.copy_default_package import main as copy_default_main
 
 
 # Infer the correct package name and current directory absolute path
