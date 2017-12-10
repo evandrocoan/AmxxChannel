@@ -3,7 +3,7 @@
             "command": "amxx_channel_generate_channel_file",
             "args": {"command": "all" } },
 
-    { "caption": "Amxx Channel: Select Package to Update Git Tag",
+    { "caption": "Amxx Channel: Select Packages to Update Git Tag",
             "command": "amxx_channel_generate_channel_file",
             "args": {"command": "git_tag" } },
 
