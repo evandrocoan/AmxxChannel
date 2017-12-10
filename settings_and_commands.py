@@ -46,9 +46,9 @@ try:
 except ImportError:
     pass
 
-from channel_manager.channel_manager import main as manager_main
-from channel_manager.submodules_manager import main as submodules_main
-from channel_manager.copy_default_package import main as copy_default_main
+from channel_manager import channel_manager
+from channel_manager import submodules_manager
+from channel_manager import copy_default_package
 
 
 # Infer the correct package name and current directory absolute path
@@ -248,7 +248,7 @@ class AmxxChannelGenerateChannelFile( sublime_plugin.ApplicationCommand ):
 
     def run(self, create_tags, command="all"):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        manager_main( g_channel_settings, create_tags, command )
+        channel_manager.main( g_channel_settings, create_tags, command )
 
     def is_enabled(self):
         return is_channel_installed()
@@ -258,17 +258,17 @@ class AmxxChannelRun( sublime_plugin.ApplicationCommand ):
 
     def run(self, run):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        submodules_main( run )
+        submodules_manager.main( run )
 
     def is_enabled(self):
         return is_channel_installed()
 
 
-class AmxxChannelUpdateDefaultPackages( sublime_plugin.ApplicationCommand ):
+class AmxxChannelExtractDefaultPackages( sublime_plugin.ApplicationCommand ):
 
     def run(self):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        copy_default_main( g_channel_settings['DEFAULT_PACKAGES_FILES'], True )
+        copy_default_package.main( g_channel_settings['DEFAULT_PACKAGES_FILES'], True )
 
     def is_enabled(self):
         return is_channel_installed()
