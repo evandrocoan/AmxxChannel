@@ -107,9 +107,8 @@ def plugin_loaded():
     g_channel_settings['CHANNEL_REPOSITORY_URL']  = clean_urljoin( CHANNEL_RAW_URL, "repository.json" )
     g_channel_settings['CHANNEL_REPOSITORY_FILE'] = os.path.join( CURRENT_DIRECTORY, "repository.json" )
 
-    # A direct URL/Path to the `settings.json` to use when installing the stable/development version
-    g_channel_settings['CHANNEL_SETTINGS_URL']  = clean_urljoin( CHANNEL_RAW_URL, "settings.json" )
-    g_channel_settings['CHANNEL_SETTINGS_PATH'] = os.path.join( CURRENT_DIRECTORY, "settings.json" )
+    # The default user preferences file
+    g_channel_settings['USER_SETTINGS_FILE'] = "Preferences.sublime-settings"
 
 
     # You can specify for some packages to be popped out from the list and being installed by
@@ -136,9 +135,6 @@ def plugin_loaded():
         "amxmodx",
         "AmxxPawn",
     ]
-
-    # The default user preferences file
-    g_channel_settings['USER_SETTINGS_FILE'] = "Preferences.sublime-settings"
 
     # Packages which you do want to install on the Stable or Development version, when reading
     # the `.gitmodules` packages list.
