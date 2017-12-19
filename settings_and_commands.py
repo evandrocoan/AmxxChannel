@@ -61,6 +61,62 @@ CURRENT_PACKAGE_NAME = os.path.basename( CURRENT_DIRECTORY )
 g_channel_settings = {}
 
 
+class AmxxChannelExtractDefaultPackages( sublime_plugin.ApplicationCommand ):
+
+    def run(self):
+        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
+        copy_default_package.main( g_channel_settings['DEFAULT_PACKAGES_FILES'], True )
+
+    def is_enabled(self):
+        return is_channel_installed()
+
+
+class AmxxChannelRun( sublime_plugin.ApplicationCommand ):
+
+    def run(self, run):
+        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
+        submodules_manager.main( run )
+
+    def is_enabled(self):
+        return is_channel_installed()
+
+
+class AmxxChannelGenerateChannelFile( sublime_plugin.ApplicationCommand ):
+
+    def run(self, create_tags, command="all"):
+        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
+        channel_manager.main( g_channel_settings, create_tags, command )
+
+    def is_enabled(self):
+        return is_channel_installed()
+
+
+class AmxxChannelRunUninstallation( sublime_plugin.ApplicationCommand ):
+
+    def run(self):
+        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
+        channel_uninstaller.main( g_channel_settings )
+
+
+class AmxxChannelRunInstallation( sublime_plugin.ApplicationCommand ):
+
+    def run(self, version="stable"):
+        """
+            Call the ChannelManager installer to install all the channel packages.
+
+            @param version   Either the value "stable" or "development" to install the
+                             Development or Stable Version of the channel.
+        """
+        add_channel()
+        g_channel_settings['INSTALLATION_TYPE'] = version
+
+        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
+        channel_installer.main( g_channel_settings )
+
+    def is_enabled(self):
+        return not is_channel_installed()
+
+
 def plugin_loaded():
     """
         We can only load the information when the Sublime Text API is available due the use of the
@@ -213,61 +269,4 @@ def add_channel():
     sublime.save_settings( package_control )
 
     clear_cache()
-
-
-class AmxxChannelRunUninstallation( sublime_plugin.ApplicationCommand ):
-
-    def run(self):
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        channel_uninstaller.main( g_channel_settings )
-
-
-class AmxxChannelRunInstallation( sublime_plugin.ApplicationCommand ):
-
-    def run(self, version="stable"):
-        """
-            Call the ChannelManager installer to install all the channel packages.
-
-            @param version   Either the value "stable" or "development" to install the
-                             Development or Stable Version of the channel.
-        """
-        add_channel()
-        g_channel_settings['INSTALLATION_TYPE'] = version
-
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        channel_installer.main( g_channel_settings )
-
-    def is_enabled(self):
-        return not is_channel_installed()
-
-
-class AmxxChannelGenerateChannelFile( sublime_plugin.ApplicationCommand ):
-
-    def run(self, create_tags, command="all"):
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        channel_manager.main( g_channel_settings, create_tags, command )
-
-    def is_enabled(self):
-        return is_channel_installed()
-
-
-class AmxxChannelRun( sublime_plugin.ApplicationCommand ):
-
-    def run(self, run):
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        submodules_manager.main( run )
-
-    def is_enabled(self):
-        return is_channel_installed()
-
-
-class AmxxChannelExtractDefaultPackages( sublime_plugin.ApplicationCommand ):
-
-    def run(self):
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        copy_default_package.main( g_channel_settings['DEFAULT_PACKAGES_FILES'], True )
-
-    def is_enabled(self):
-        return is_channel_installed()
-
 
