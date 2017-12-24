@@ -10,7 +10,7 @@
 #
 # Licensing
 #
-# Amxxx Channel settings and commands
+# Amxx Channel Settings, all the settings required by this channel
 # Copyright (C) 2017 Evandro Coan <https://github.com/evandrocoan>
 #
 #  This program is free software; you can redistribute it and/or modify it
@@ -28,148 +28,28 @@
 #
 
 import os
-
 import sublime
-import sublime_plugin
 
 from channel_manager.channel_utilities import clean_urljoin
-from channel_manager.channel_utilities import load_data_file
-from channel_manager.channel_utilities import get_main_directory
-from channel_manager.channel_utilities import get_dictionary_key
+from channel_manager.channel_utilities import run_channel_setup
 
-from channel_manager import channel_installer
-from channel_manager import channel_uninstaller
-
-try:
-    from package_control.package_manager import clear_cache
-
-except ImportError:
-    pass
-
-from channel_manager import channel_manager
-from channel_manager import submodules_manager
-from channel_manager import copy_default_package
-
-
-# Infer the correct package name and current directory absolute path
-CURRENT_DIRECTORY    = os.path.dirname( os.path.realpath( __file__ ) )
-CURRENT_DIRECTORY    = CURRENT_DIRECTORY.replace( ".sublime-package", "" )
-CURRENT_PACKAGE_NAME = os.path.basename( CURRENT_DIRECTORY )
-
-# Hold all the information for this channel, which will be used by the `ChannelManager` to install
-# this channel
-g_channel_settings = {}
-
-
-class AmxxChannelExtractDefaultPackages( sublime_plugin.ApplicationCommand ):
-
-    def run(self):
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        copy_default_package.main( g_channel_settings['DEFAULT_PACKAGES_FILES'], True )
-
-    def is_enabled(self):
-        return is_channel_installed()
-
-
-class AmxxChannelRun( sublime_plugin.ApplicationCommand ):
-
-    def run(self, run):
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        submodules_manager.main( run )
-
-    def is_enabled(self):
-        return is_channel_installed()
-
-
-class AmxxChannelGenerateChannelFile( sublime_plugin.ApplicationCommand ):
-
-    def run(self, create_tags, command="all"):
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        channel_manager.main( g_channel_settings, create_tags, command )
-
-    def is_enabled(self):
-        return is_channel_installed()
-
-
-class AmxxChannelRunUninstallation( sublime_plugin.ApplicationCommand ):
-
-    def run(self):
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        channel_uninstaller.main( g_channel_settings )
-
-
-class AmxxChannelRunInstallation( sublime_plugin.ApplicationCommand ):
-
-    def run(self, version="stable"):
-        """
-            Call the ChannelManager installer to install all the channel packages.
-
-            @param version   Either the value "stable" or "development" to install the
-                             Development or Stable Version of the channel.
-        """
-        add_channel()
-        g_channel_settings['INSTALLATION_TYPE'] = version
-
-        sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
-        channel_installer.main( g_channel_settings )
-
-    def is_enabled(self):
-        return not is_channel_installed()
-
+CURRENT_PACKAGE_ROOT_DIRECTORY = os.path.dirname( os.path.realpath( __file__ ) ).replace( ".sublime-package", "" )
+CURRENT_PACKAGE_NAME           = os.path.basename( CURRENT_PACKAGE_ROOT_DIRECTORY )
 
 def plugin_loaded():
-    """
-        We can only load the information when the Sublime Text API is available due the use of the
-        get_main_directory() which requires it.
-    """
     global g_channel_settings
+    CHANNEL_RAW_URL = "https://raw.githubusercontent.com/evandrocoan/StudioChannel/master/"
 
-    # The folder where the directory where the Sublime Text `Packages` (loose packages) folder is on
-    CHANNEL_MAIN_DIRECTORY = get_main_directory( CURRENT_DIRECTORY )
-
-    # The folder where the User settings are on
-    USER_FOLDER_PATH = os.path.join( CHANNEL_MAIN_DIRECTORY, "Packages", "User" )
-
-    # The temporary folder to download the main repository when installing the development version
-    g_channel_settings['CHANNEL_PACKAGE_NAME']    = CURRENT_PACKAGE_NAME
-    g_channel_settings['TEMPORARY_FOLDER_TO_USE'] = "__channel_temporary_directory"
-
-    # Where to save the settings for channel after it is installed on the user's machine
-    g_channel_settings['USER_FOLDER_PATH']              = USER_FOLDER_PATH
-    g_channel_settings['CHANNEL_INSTALLATION_SETTINGS'] = \
-            os.path.join( USER_FOLDER_PATH,CURRENT_PACKAGE_NAME + ".sublime-settings" )
-
-
-    # The local path to the files, used to save the generated channels. Valid URLs to the files, to use
-    # when installing the stable version of the channel See also:
-    # https://packagecontrol.io/docs/channels_and_repositories
-
-    # The default Package Control channel
+    g_channel_settings = {}
+    g_channel_settings['CHANNEL_ROOT_URL']    = "https://github.com/evandrocoan/SublimeTextAmxxSimpleIDE"
     g_channel_settings['DEFAULT_CHANNEL_URL'] = "https://packagecontrol.io/channel_v3.json"
 
-    # The URL of the directory where the files `channel.json` and `repository.json` are hosted
-    CHANNEL_RAW_URL = "https://raw.githubusercontent.com/evandrocoan/SublimeStudioChannel/master/"
-
-    # The URL to the main A direct URL/Path to the repository where there is the `.gitmodules` file
-    # listing all the channel packages to use when generating Studio Channel files.
-    g_channel_settings['CHANNEL_ROOT_URL']       = "https://github.com/evandrocoan/SublimeTextAmxxSimpleIDE"
-    g_channel_settings['CHANNEL_ROOT_DIRECTORY'] = CHANNEL_MAIN_DIRECTORY
-
-    # The file path to the Channel File `channel.json` to use when installing the development version
     g_channel_settings['CHANNEL_FILE_URL']  = clean_urljoin( CHANNEL_RAW_URL, "channel.json" )
-    g_channel_settings['CHANNEL_FILE_PATH'] = os.path.join( CURRENT_DIRECTORY, "channel.json" )
+    g_channel_settings['CHANNEL_FILE_PATH'] = os.path.join( CURRENT_PACKAGE_ROOT_DIRECTORY, "channel.json" )
 
-    # A direct URL/Path to the Repository File `repository.json` to use when installing the
-    # stable/development version
     g_channel_settings['CHANNEL_REPOSITORY_URL']  = clean_urljoin( CHANNEL_RAW_URL, "repository.json" )
-    g_channel_settings['CHANNEL_REPOSITORY_FILE'] = os.path.join( CURRENT_DIRECTORY, "repository.json" )
+    g_channel_settings['CHANNEL_REPOSITORY_FILE'] = os.path.join( CURRENT_PACKAGE_ROOT_DIRECTORY, "repository.json" )
 
-    # The default user preferences file
-    g_channel_settings['USER_SETTINGS_FILE'] = "Preferences.sublime-settings"
-
-
-    # You can specify for some packages to be popped out from the list and being installed by
-    # last/first in the following order presented.
     g_channel_settings['PACKAGES_TO_INSTALL_FIRST'] = \
     [
         "Notepad++ Color Scheme",
@@ -181,10 +61,9 @@ def plugin_loaded():
         "PackagesManager",
     ]
 
-    # Packages which are not allowed to be selected by the user while choosing the packages to not
-    # be installed. Useful for packages which are required for the channel maintainability.
     g_channel_settings['FORBIDDEN_PACKAGES'] = \
     [
+        "0_settings_loader",
         "PackagesManager",
         "ChannelManager",
         "Notepad++ Color Scheme",
@@ -193,8 +72,23 @@ def plugin_loaded():
         "AmxxPawn",
     ]
 
-    # Packages which you do want to install on the Stable or Development version, when reading
-    # the `.gitmodules` packages list.
+    g_channel_settings['DEFAULT_PACKAGE_FILES'] = \
+    [
+        ".gitignore",
+        ".no-sublime-package",
+        "Context.sublime-menu",
+        "Distraction Free.sublime-settings",
+        "Find Results.hidden-tmLanguage",
+        "Main.sublime-menu",
+        "README.md",
+        "Sublime Text Settings.sublime-settings",
+        "Tab Context.sublime-menu",
+        "install_package_control.py",
+        "platform_edit_settings.py",
+        "synced_side_bar_watcher.py",
+        "transpose.py",
+    ]
+
     g_channel_settings['PACKAGES_TO_NOT_INSTALL_STABLE'] = \
     [
         "User",
@@ -205,68 +99,36 @@ def plugin_loaded():
     [
     ]
 
-    # The files of the `Default.sublime-package` you are installing
-    g_channel_settings['DEFAULT_PACKAGES_FILES'] = \
+    g_channel_settings['PACKAGES_TO_INSTALL_EXCLUSIVELY'] = \
     [
-        ".gitignore",
-        ".no-sublime-package",
-        "Context.sublime-menu",
-        "Default (Linux).sublime-keymap",
-        "Default (Linux).sublime-mousemap",
-        "Default (OSX).sublime-keymap",
-        "Default (OSX).sublime-mousemap",
-        "Default (Windows).sublime-keymap",
-        "Default (Windows).sublime-mousemap",
-        "Distraction Free.sublime-settings",
-        "Find Results.hidden-tmLanguage",
-        "install_package_control.py",
-        "package-metadata.json",
-        "Preferences (Linux).sublime-settings",
-        "Preferences (OSX).sublime-settings",
-        "Preferences (Windows).sublime-settings",
-        "Preferences.sublime-settings",
-        "README.md",
-        "Sublime Text Settings.sublime-settings",
-        "Tab Context.sublime-menu",
-        "transpose.py",
+        "ActiveViewJumpBack",
+        "amxmodx",
+        "AmxxChannel",
+        "AmxxPawn",
+        "ChannelManager",
+        "ClearCursorsCarets",
+        "Default",
+        "DefaultSyntax",
+        "Diff",
+        "FixedSelectionsClear",
+        "FixProjectSwitchRestartBug",
+        "MoveText",
+        "Notepad++ Color Scheme",
+        "OverrideUnpackedPackages",
+        "OverwriteCommitCompletion",
+        "PackagesManager",
+        "PowerCursors",
+        "Side-by-Side Settings",
     ]
 
+    g_channel_settings['PACKAGES_TO_IGNORE_ON_DEVELOPMENT'] = \
+    [
+    ]
 
-def is_channel_installed():
-    """
-        Returns True if the channel is installed, i.e., there are packages added to the
-        `packages_to_uninstall` list.
-    """
+    run_channel_setup( g_channel_settings, CURRENT_PACKAGE_NAME, CURRENT_PACKAGE_ROOT_DIRECTORY )
 
-    # Only attempt to check it, if the settings are loaded
-    if len( g_channel_settings ) > 0:
-        channelSettingsPath = g_channel_settings['CHANNEL_INSTALLATION_SETTINGS']
-
-        if os.path.exists( channelSettingsPath ):
-            settings = load_data_file( channelSettingsPath )
-            return len( get_dictionary_key( settings, "packages_to_uninstall", [] ) ) > 0
-
-    return False
-
-
-def add_channel():
-    """
-        Add your channel URL to the Package Control channel list and cleans the cached channels.
-    """
-    package_control = "Package Control.sublime-settings"
-    channel_url     = g_channel_settings['CHANNEL_FILE_URL']
-
-    package_control_settings = sublime.load_settings( package_control )
-    channels                 = package_control_settings.get( "channels", [] )
-
-    if channel_url in channels:
-        channels.remove( channel_url )
-
-    channels.append( channel_url )
-    package_control_settings.set( "channels", channels )
-
-    print( "Adding %s channel to %s: %s" % ( CURRENT_PACKAGE_NAME, package_control, str( channels ) ) )
-    sublime.save_settings( package_control )
-
-    clear_cache()
+    # from channel_manager.channel_utilities import print_all_variables_for_debugging
+    # print_all_variables_for_debugging
+    # import sublime_plugin
+    # sublime_plugin.reload_plugin( "channel_manager.channel_utilities" )
 
