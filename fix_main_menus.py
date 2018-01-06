@@ -33,7 +33,7 @@ As they were moved into the Custom Settings package.
 
 """
 
-CURRENT_DIRECTORY = os.path.dirname( os.path.realpath( __file__ ) )
+PACKAGE_ROOT_DIRECTORY = os.path.dirname( os.path.realpath( __file__ ) )
 
 
 def plugin_loaded():
@@ -44,6 +44,6 @@ def add_files_to_copy_list():
     from .commands import is_channel_installed
 
     if is_channel_installed():
-        add_folder_to_processing_queue( CURRENT_DIRECTORY, os.path.join( "User", "Amxx" ), 100 )
+        add_folder_to_processing_queue( PACKAGE_ROOT_DIRECTORY, os.path.join( "User", "Amxx" ), 100 )
 
 
