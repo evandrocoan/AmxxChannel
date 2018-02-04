@@ -3,7 +3,7 @@
     {
         "*":
         [
-            "PythonDebugTools",
+            "debug_tools",
             "EstimatedTimeLeft",
             "ChannelManager"
         ]
