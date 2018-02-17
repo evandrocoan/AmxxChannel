@@ -47,7 +47,7 @@ def plugin_loaded():
     CHANNEL_RAW_URL = "https://raw.githubusercontent.com/evandrocoan/StudioChannel/master/"
 
     g_channelSettings = {}
-    g_channelSettings['CHANNEL_ROOT_URL']    = "https://github.com/evandrocoan/SublimeTextAmxxSimpleIDE"
+    g_channelSettings['CHANNEL_ROOT_URL']    = "https://github.com/evandrocoan/AmxxSimpleIDE"
     g_channelSettings['DEFAULT_CHANNEL_URL'] = "https://packagecontrol.io/channel_v3.json"
 
     g_channelSettings['CHANNEL_FILE_URL']  = clean_urljoin( CHANNEL_RAW_URL, "channel.json" )
@@ -74,7 +74,7 @@ def plugin_loaded():
         "ChannelManager",
         "Notepad++ Color Scheme",
         "OverrideUnpackedPackages",
-        "amxmodx",
+        "Amxmodx",
         "AmxxPawn",
     ]
 
@@ -89,10 +89,8 @@ def plugin_loaded():
         "README.md",
         "Sublime Text Settings.sublime-settings",
         "Tab Context.sublime-menu",
-        "install_package_control.py",
         "platform_edit_settings.py",
         "synced_side_bar_watcher.py",
-        "transpose.py",
     ]
 
     g_channelSettings['PACKAGES_TO_NOT_INSTALL_STABLE'] = \
@@ -110,21 +108,24 @@ def plugin_loaded():
         "ActiveViewJumpBack",
         "Amxmodx",
         "AmxxChannel",
-        "AmxxPawn",
+        "PortalockerFiles",
+        "ConcurrentLogHandler",
+        "DebugTools",
+        "EstimatedTimeLeft",
         "ChannelManager",
+        "AmxxPawn",
         "ClearCursorsCarets",
         "Default",
         "DefaultSyntax",
         "Diff",
-        "FixedSelectionsClear",
         "FixProjectSwitchRestartBug",
         "MoveText",
         "Notepad++ Color Scheme",
         "OverrideUnpackedPackages",
-        "OverwriteCommitCompletion",
+        "OverrideCommitCompletion",
         "PackagesManager",
         "PowerCursors",
-        "Side-by-Side Settings",
+        "SideBySideSettings",
     ]
 
     g_channelSettings['PACKAGES_TO_IGNORE_ON_DEVELOPMENT'] = \
