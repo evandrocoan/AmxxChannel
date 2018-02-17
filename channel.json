@@ -1,0 +1,472 @@
+{
+    "repositories": [
+        "https://raw.githubusercontent.com/evandrocoan/AmxxChannel/master/repository.json"
+    ],
+    "schema_version": "3.0.0",
+    "packages_cache": {
+        "https://raw.githubusercontent.com/evandrocoan/AmxxChannel/master/repository.json": [
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/ActiveViewJumpBack",
+                "homepage": "https://github.com/evandrocoan/ActiveViewJumpBack",
+                "name": "ActiveViewJumpBack",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2017-10-21 23:17:59",
+                        "git_tag": "1.0.1",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/ActiveViewJumpBack/zip/1.0.1",
+                        "version": "2017.0021.2317"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/AmxxEditor",
+                "homepage": "https://github.com/evandrocoan/AmxxEditor",
+                "name": "Amxmodx",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-02-16 01:40:11",
+                        "git_tag": "2.0.0",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/AmxxEditor/zip/2.0.0",
+                        "version": "2018.0216.0140"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/AmxxChannel",
+                "homepage": "https://github.com/evandrocoan/AmxxChannel",
+                "name": "AmxxChannel",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-02-16 21:29:27",
+                        "git_tag": "master",
+                        "is_branched_tag": true,
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/AmxxChannel/zip/master",
+                        "version": "2018.0216.2129"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/AmxxPawn",
+                "homepage": "https://github.com/evandrocoan/AmxxPawn",
+                "name": "AmxxPawn",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2017-12-04 12:24:40",
+                        "git_tag": "1.0.9",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/AmxxPawn/zip/1.0.9",
+                        "version": "2017.0204.1224"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/ClearCursorsCarets",
+                "homepage": "https://github.com/evandrocoan/ClearCursorsCarets",
+                "name": "ClearCursorsCarets",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-01-06 14:59:29",
+                        "git_tag": "1.0.1",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/ClearCursorsCarets/zip/1.0.1",
+                        "version": "2018.0106.1459"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "",
+                    "Forked by evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/Default",
+                "homepage": "https://github.com/evandrocoan/Default",
+                "name": "Default",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-01-03 10:37:13",
+                        "git_tag": "1.0.11",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/Default/zip/1.0.11",
+                        "version": "2018.0103.1037"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/DefaultSyntax",
+                "homepage": "https://github.com/evandrocoan/DefaultSyntax",
+                "name": "DefaultSyntax",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2017-10-02 20:18:03",
+                        "git_tag": "1.0.0",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/DefaultSyntax/zip/1.0.0",
+                        "version": "2017.0002.2018"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/FixProjectSwitchRestartBug",
+                "homepage": "https://github.com/evandrocoan/FixProjectSwitchRestartBug",
+                "name": "FixProjectSwitchRestartBug",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2017-07-08 01:46:48",
+                        "git_tag": "1.0.0",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/FixProjectSwitchRestartBug/zip/1.0.0",
+                        "version": "2017.0708.0146"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "Colin T.A. Gray (colinta)",
+                    "Forked by evandrocoan"
+                ],
+                "buy": null,
+                "description": "Select text and drag it around, or setup a text tunnel to move code from one location to another.",
+                "donate": null,
+                "homepage": "https://github.com/evandrocoan/MoveText",
+                "issues": "https://github.com/colinta/SublimeMoveText/issues",
+                "labels": [
+                    "formatting",
+                    "text manipulation"
+                ],
+                "last_modified": "2018-01-26 16:35:33",
+                "name": "MoveText",
+                "previous_names": [],
+                "readme": "https://raw.githubusercontent.com/colinta/SublimeMoveText/master/README.md",
+                "releases": [
+                    {
+                        "date": "2017-12-17 15:46:11",
+                        "git_tag": "2.0.6",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/MoveText/zip/2.0.6",
+                        "version": "2017.0217.1546"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "buy": null,
+                "description": "Notepad++ Color Scheme for Sublime Text",
+                "donate": null,
+                "homepage": "https://github.com/evandrocoan/NotepadPlusPlusColorScheme",
+                "issues": "https://github.com/evandrocoan/NotepadPlusPlusColorScheme/issues",
+                "labels": [
+                    "color scheme",
+                    "notepad++"
+                ],
+                "last_modified": "2018-02-07 23:13:28",
+                "name": "Notepad++ Color Scheme",
+                "previous_names": [],
+                "readme": "https://raw.githubusercontent.com/evandrocoan/SublimeNotepadPlusPlusTheme/master/README.md",
+                "releases": [
+                    {
+                        "date": "2018-02-07 21:13:28",
+                        "git_tag": "2.0.2",
+                        "platforms": "*",
+                        "sublime_text": ">3144",
+                        "url": "https://codeload.github.com/evandrocoan/NotepadPlusPlusColorScheme/zip/2.0.2",
+                        "version": "2018.0207.2113"
+                    },
+                    {
+                        "date": "2017-08-10 23:50:25",
+                        "platforms": "*",
+                        "sublime_text": "<=3144",
+                        "url": "https://codeload.github.com/evandrocoan/NotepadPlusPlusColorScheme/zip/3144",
+                        "version": "2017.0810.2350"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/OverrideCommitCompletion",
+                "homepage": "https://github.com/evandrocoan/OverrideCommitCompletion",
+                "name": "OverrideCommitCompletion",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-02-15 20:31:05",
+                        "git_tag": "1.0.10",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/OverrideCommitCompletion/zip/1.0.10",
+                        "version": "2018.0215.2031"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/OverrideUnpackedPackages",
+                "homepage": "https://github.com/evandrocoan/OverrideUnpackedPackages",
+                "name": "OverrideUnpackedPackages",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-02-16 22:12:06",
+                        "git_tag": "1.0.7",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/OverrideUnpackedPackages/zip/1.0.7",
+                        "version": "2018.0216.2212"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "wbond",
+                    "Forked by evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/PackagesManager",
+                "homepage": "https://github.com/evandrocoan/PackagesManager",
+                "name": "PackagesManager",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-02-16 02:47:29",
+                        "git_tag": "master",
+                        "is_branched_tag": true,
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/PackagesManager/zip/master",
+                        "version": "2018.0216.0247"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "MaokaiLin",
+                    "Forked by evandrocoan"
+                ],
+                "buy": null,
+                "description": "A Sublime Text 3 package that makes the add/remove/select of multiple cursors more convenient with keyboard.",
+                "donate": null,
+                "homepage": "https://github.com/evandrocoan/PowerCursors",
+                "issues": "https://github.com/MaokaiLin/PowerCursors/issues",
+                "labels": [],
+                "last_modified": "2014-04-13 03:47:24",
+                "name": "PowerCursors",
+                "previous_names": [],
+                "readme": "https://raw.githubusercontent.com/MaokaiLin/PowerCursors/master/README.md",
+                "releases": [
+                    {
+                        "date": "2017-12-17 15:46:13",
+                        "git_tag": "1.2.4",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/PowerCursors/zip/1.2.4",
+                        "version": "2017.0217.1546"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "jgbishop",
+                    "Forked by evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/SideBySideSettings",
+                "homepage": "https://github.com/evandrocoan/SideBySideSettings",
+                "name": "SideBySideSettings",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-01-23 15:51:36",
+                        "git_tag": "1.4.1",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/SideBySideSettings/zip/1.4.1",
+                        "version": "2018.0123.1551"
+                    }
+                ]
+            }
+        ]
+    },
+    "dependencies_cache": {
+        "https://raw.githubusercontent.com/evandrocoan/AmxxChannel/master/repository.json": [
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/ChannelManager",
+                "homepage": "https://github.com/evandrocoan/ChannelManager",
+                "issues": "https://github.com/evandrocoan/ChannelManager/issues",
+                "load_order": "30",
+                "name": "ChannelManager",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "base": "https://github.com/evandrocoan/ChannelManager",
+                        "date": "2018-02-16 22:12:04",
+                        "git_tag": "1.0.78",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "tags": true,
+                        "url": "https://codeload.github.com/evandrocoan/ChannelManager/zip/1.0.78",
+                        "version": "2018.0216.2212"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "Preston-Landers",
+                    "Forked by evandroforks"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandroforks/concurrent-log-handler",
+                "homepage": "https://github.com/evandroforks/concurrent-log-handler",
+                "issues": "https://github.com/evandroforks/concurrent-log-handler/issues",
+                "load_order": "09",
+                "name": "ConcurrentLogHandler",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "base": "https://github.com/evandroforks/concurrent-log-handler",
+                        "date": "2018-02-16 22:12:05",
+                        "git_tag": "0.9.9",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "tags": true,
+                        "url": "https://codeload.github.com/evandroforks/concurrent-log-handler/zip/0.9.9",
+                        "version": "2018.0216.2212"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/DebugTools",
+                "homepage": "https://github.com/evandrocoan/DebugTools",
+                "issues": "https://github.com/evandrocoan/DebugTools/issues",
+                "load_order": "10",
+                "name": "DebugTools",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "base": "https://github.com/evandrocoan/DebugTools",
+                        "date": "2018-02-16 22:12:05",
+                        "git_tag": "2.1.3",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "tags": true,
+                        "url": "https://codeload.github.com/evandrocoan/DebugTools/zip/2.1.3",
+                        "version": "2018.0216.2212"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "arp2600",
+                    "Forked by evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/EstimatedTimeLeft",
+                "homepage": "https://github.com/evandrocoan/EstimatedTimeLeft",
+                "issues": "https://github.com/evandrocoan/EstimatedTimeLeft/issues",
+                "load_order": "20",
+                "name": "EstimatedTimeLeft",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "base": "https://github.com/evandrocoan/EstimatedTimeLeft",
+                        "date": "2017-12-17 02:19:33",
+                        "git_tag": "1.0.5",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "tags": true,
+                        "url": "https://codeload.github.com/evandrocoan/EstimatedTimeLeft/zip/1.0.5",
+                        "version": "2017.0217.0219"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "WoLpH",
+                    "Forked by evandroforks"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandroforks/portalocker",
+                "homepage": "https://github.com/evandroforks/portalocker",
+                "issues": "https://github.com/evandroforks/portalocker/issues",
+                "load_order": "08",
+                "name": "PortalockerFiles",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "base": "https://github.com/evandroforks/portalocker",
+                        "date": "2018-02-16 22:12:07",
+                        "git_tag": "1.1.2",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "tags": true,
+                        "url": "https://codeload.github.com/evandroforks/portalocker/zip/1.1.2",
+                        "version": "2018.0216.2212"
+                    }
+                ]
+            }
+        ]
+    }
+}
