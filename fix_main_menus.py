@@ -42,8 +42,10 @@ def plugin_loaded():
 
 def add_files_to_copy_list():
     from .commands import is_channel_installed
+    from .commands import get_channel_file_setting
 
-    if is_channel_installed():
+    if is_channel_installed() \
+            and get_channel_file_setting( "is_channel_installed", True ):
+
         add_folder_to_processing_queue( PACKAGE_ROOT_DIRECTORY, os.path.join( "User", "Amxx" ), 100 )
-
 
