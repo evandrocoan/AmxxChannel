@@ -16,12 +16,12 @@
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2018-02-17 03:17:51",
-                        "git_tag": "1.0.7",
+                        "date": "2018-04-07 10:40:53",
+                        "git_tag": "1.0.8",
                         "platforms": "*",
                         "sublime_text": ">=3126",
-                        "url": "https://codeload.github.com/evandrocoan/0_settings_loader/zip/1.0.7",
-                        "version": "2018.0217.0317"
+                        "url": "https://codeload.github.com/evandrocoan/0_settings_loader/zip/1.0.8",
+                        "version": "2018.0407.1040"
                     }
                 ]
             },
@@ -50,26 +50,6 @@
                     "evandrocoan"
                 ],
                 "description": "No description available.",
-                "details": "https://github.com/evandrocoan/AmxxEditor",
-                "homepage": "https://github.com/evandrocoan/AmxxEditor",
-                "name": "Amxmodx",
-                "previous_names": [],
-                "releases": [
-                    {
-                        "date": "2018-07-15 22:27:39",
-                        "git_tag": "2.0.6",
-                        "platforms": "*",
-                        "sublime_text": ">=3126",
-                        "url": "https://codeload.github.com/evandrocoan/AmxxEditor/zip/2.0.6",
-                        "version": "2018.0715.2227"
-                    }
-                ]
-            },
-            {
-                "authors": [
-                    "evandrocoan"
-                ],
-                "description": "No description available.",
                 "details": "https://github.com/evandrocoan/AmxxChannel",
                 "homepage": "https://github.com/evandrocoan/AmxxChannel",
                 "name": "AmxxChannel",
@@ -83,6 +63,26 @@
                         "sublime_text": ">=3126",
                         "url": "https://codeload.github.com/evandrocoan/AmxxChannel/zip/master",
                         "version": "2018.0715.2220"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/AmxxEditor",
+                "homepage": "https://github.com/evandrocoan/AmxxEditor",
+                "name": "AmxxEditor",
+                "previous_names": [],
+                "releases": [
+                    {
+                        "date": "2018-07-15 22:27:39",
+                        "git_tag": "2.0.6",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/AmxxEditor/zip/2.0.6",
+                        "version": "2018.0715.2227"
                     }
                 ]
             },
@@ -138,12 +138,12 @@
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2018-01-03 10:37:13",
-                        "git_tag": "1.0.11",
+                        "date": "2018-04-07 10:36:26",
+                        "git_tag": "1.0.12",
                         "platforms": "*",
                         "sublime_text": ">=3126",
-                        "url": "https://codeload.github.com/evandrocoan/Default/zip/1.0.11",
-                        "version": "2018.0103.1037"
+                        "url": "https://codeload.github.com/evandrocoan/Default/zip/1.0.12",
+                        "version": "2018.0407.1036"
                     }
                 ]
             },
@@ -229,18 +229,18 @@
                     "color scheme",
                     "notepad++"
                 ],
-                "last_modified": "2018-02-07 23:13:28",
+                "last_modified": "2018-05-21 23:00:08",
                 "name": "Notepad++ Color Scheme",
                 "previous_names": [],
                 "readme": "https://raw.githubusercontent.com/evandrocoan/SublimeNotepadPlusPlusTheme/master/README.md",
                 "releases": [
                     {
-                        "date": "2018-02-07 21:13:28",
-                        "git_tag": "2.0.2",
+                        "date": "2018-05-21 20:00:08",
+                        "git_tag": "2.0.5",
                         "platforms": "*",
                         "sublime_text": ">3144",
-                        "url": "https://codeload.github.com/evandrocoan/NotepadPlusPlusColorScheme/zip/2.0.2",
-                        "version": "2018.0207.2113"
+                        "url": "https://codeload.github.com/evandrocoan/NotepadPlusPlusColorScheme/zip/2.0.5",
+                        "version": "2018.0521.2000"
                     },
                     {
                         "date": "2017-08-10 23:50:25",
@@ -378,13 +378,13 @@
                 "releases": [
                     {
                         "base": "https://github.com/evandrocoan/ChannelManager",
-                        "date": "2018-03-08 13:04:32",
-                        "git_tag": "1.0.83",
+                        "date": "2018-03-25 00:14:03",
+                        "git_tag": "1.0.84",
                         "platforms": "*",
                         "sublime_text": ">=3126",
                         "tags": true,
-                        "url": "https://codeload.github.com/evandrocoan/ChannelManager/zip/1.0.83",
-                        "version": "2018.0308.1304"
+                        "url": "https://codeload.github.com/evandrocoan/ChannelManager/zip/1.0.84",
+                        "version": "2018.0325.0014"
                     }
                 ]
             },
@@ -477,13 +477,13 @@
                 "releases": [
                     {
                         "base": "https://github.com/evandroforks/portalocker",
-                        "date": "2018-03-08 13:01:09",
-                        "git_tag": "1.1.4",
+                        "date": "2018-04-26 20:03:16",
+                        "git_tag": "2.0.1",
                         "platforms": "*",
                         "sublime_text": ">=3126",
                         "tags": true,
-                        "url": "https://codeload.github.com/evandroforks/portalocker/zip/1.1.4",
-                        "version": "2018.0308.1301"
+                        "url": "https://codeload.github.com/evandroforks/portalocker/zip/2.0.1",
+                        "version": "2018.0426.2003"
                     }
                 ]
             }
