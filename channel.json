@@ -56,12 +56,12 @@
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2018-04-07 10:17:15",
-                        "git_tag": "2.0.3",
+                        "date": "2018-07-15 22:27:39",
+                        "git_tag": "2.0.6",
                         "platforms": "*",
                         "sublime_text": ">=3126",
-                        "url": "https://codeload.github.com/evandrocoan/AmxxEditor/zip/2.0.3",
-                        "version": "2018.0407.1017"
+                        "url": "https://codeload.github.com/evandrocoan/AmxxEditor/zip/2.0.6",
+                        "version": "2018.0715.2227"
                     }
                 ]
             },
@@ -76,13 +76,13 @@
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2018-03-04 20:36:48",
+                        "date": "2018-07-15 22:20:51",
                         "git_tag": "master",
                         "is_branched_tag": true,
                         "platforms": "*",
                         "sublime_text": ">=3126",
                         "url": "https://codeload.github.com/evandrocoan/AmxxChannel/zip/master",
-                        "version": "2018.0304.2036"
+                        "version": "2018.0715.2220"
                     }
                 ]
             },
