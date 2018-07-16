@@ -47,5 +47,5 @@ def add_files_to_copy_list():
     if is_channel_installed() \
             and get_channel_file_setting( "is_to_install_the_menu", True ):
 
-        add_folder_to_processing_queue( PACKAGE_ROOT_DIRECTORY, os.path.join( "User", "Amxx" ), 100 )
+        add_folder_to_processing_queue( PACKAGE_ROOT_DIRECTORY, os.path.join( "User", "Amxmodx" ), 100 )
 
