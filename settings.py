@@ -74,8 +74,8 @@ def plugin_loaded():
         "ChannelManager",
         "Notepad++ Color Scheme",
         "OverrideUnpackedPackages",
-        "Amxmodx",
         "AmxxPawn",
+        "AmxxEditor",
     ]
 
     g_channelSettings['DEFAULT_PACKAGE_FILES'] = \
@@ -107,7 +107,7 @@ def plugin_loaded():
     [
         "0_settings_loader",
         "ActiveViewJumpBack",
-        "Amxmodx",
+        "AmxxEditor",
         "AmxxChannel",
         "PortalockerFiles",
         "ConcurrentLogHandler",
