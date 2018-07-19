@@ -83,6 +83,7 @@ def plugin_loaded():
         ".gitignore",
         ".no-sublime-package",
         "Context.sublime-menu",
+        "Default.sublime-commands",
         "Distraction Free.sublime-settings",
         "Find Results.hidden-tmLanguage",
         "Main.sublime-menu",
