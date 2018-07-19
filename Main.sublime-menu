@@ -13,6 +13,7 @@
                 [
                     {
                         "caption": "AmxxChannel",
+                        "id": "AmxxChannel",
                         "children":
                         [
                             { "caption": "Generate Channel File",
