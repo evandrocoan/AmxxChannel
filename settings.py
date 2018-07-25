@@ -32,8 +32,8 @@ import sublime
 
 # from channel_manager.channel_utilities import print_all_variables_for_debugging
 # print_all_variables_for_debugging( g_channelSettings )
-# import sublime_plugin
-# sublime_plugin.reload_plugin( "channel_manager.channel_utilities" )
+# import sublime_plugin; sublime_plugin.reload_plugin( "channel_manager.channel_manager" )
+# import sublime_plugin; sublime_plugin.reload_plugin( "channel_manager.submodules_manager" )
 
 from channel_manager.channel_utilities import clean_urljoin
 from channel_manager.channel_utilities import run_channel_setup
@@ -87,11 +87,11 @@ def plugin_loaded():
         "Distraction Free.sublime-settings",
         "Find Results.hidden-tmLanguage",
         "Main.sublime-menu",
+        "platform_edit_settings.py",
         "README.md",
+        "synced_side_bar_watcher.py",
         "Sublime Text Settings.sublime-settings",
         "Tab Context.sublime-menu",
-        "platform_edit_settings.py",
-        "synced_side_bar_watcher.py",
     ]
 
     g_channelSettings['PACKAGES_TO_NOT_INSTALL_STABLE'] = \
@@ -108,22 +108,22 @@ def plugin_loaded():
     [
         "0_settings_loader",
         "ActiveViewJumpBack",
-        "AmxxEditor",
         "AmxxChannel",
-        "BBCode",
-        "DebugTools",
-        "EstimatedTimeLeft",
-        "ChannelManager",
+        "AmxxEditor",
         "AmxxPawn",
+        "BBCode",
+        "ChannelManager",
         "ClearCursorsCarets",
+        "DebugTools",
         "Default",
         "DefaultSyntax",
         "Diff",
+        "EstimatedTimeLeft",
         "FixProjectSwitchRestartBug",
         "MoveText",
         "Notepad++ Color Scheme",
-        "OverrideUnpackedPackages",
         "OverrideCommitCompletion",
+        "OverrideUnpackedPackages",
         "PackagesManager",
         "PowerCursors",
         "SideBySideSettings",
