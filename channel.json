@@ -70,19 +70,34 @@
                 "authors": [
                     "evandrocoan"
                 ],
-                "description": "No description available.",
-                "details": "https://github.com/evandrocoan/AmxxEditor",
+                "buy": null,
+                "description": "Auto-complete and Build System for Amx Mod X on Sublime Text",
+                "donate": null,
                 "homepage": "https://github.com/evandrocoan/AmxxEditor",
+                "issues": "https://github.com/evandrocoan/AmxxEditor/issues",
+                "labels": [
+                    "autocompletion",
+                    "auto-complete",
+                    "amxmodx",
+                    "amx mod x",
+                    "amxx",
+                    "pawn",
+                    "build system"
+                ],
+                "last_modified": "2018-07-25 06:21:28",
                 "name": "AmxxEditor",
-                "previous_names": [],
+                "previous_names": [
+                    "Amxmodx"
+                ],
+                "readme": "https://raw.githubusercontent.com/evandrocoan/AmxxEditor/master/README.MD",
                 "releases": [
                     {
-                        "date": "2018-07-15 22:27:39",
-                        "git_tag": "2.0.6",
+                        "date": "2018-07-25 03:21:28",
+                        "git_tag": "3.0.2",
                         "platforms": "*",
                         "sublime_text": ">=3126",
-                        "url": "https://codeload.github.com/evandrocoan/AmxxEditor/zip/master",
-                        "version": "2018.0715.2228"
+                        "url": "https://codeload.github.com/evandrocoan/AmxxEditor/zip/3.0.2",
+                        "version": "2018.0725.0321"
                     }
                 ]
             },
@@ -90,19 +105,51 @@
                 "authors": [
                     "evandrocoan"
                 ],
-                "description": "No description available.",
-                "details": "https://github.com/evandrocoan/AmxxPawn",
+                "buy": null,
+                "description": "Amx Mod X self-contained syntax definition for Sublime Text",
+                "donate": null,
                 "homepage": "https://github.com/evandrocoan/AmxxPawn",
+                "issues": "https://github.com/evandrocoan/AmxxPawn/issues",
+                "labels": [
+                    "language syntax",
+                    "amxmodx",
+                    "amx mod x"
+                ],
+                "last_modified": "2018-07-19 22:47:29",
                 "name": "AmxxPawn",
+                "previous_names": [
+                    "Amxx Pawn"
+                ],
+                "readme": "https://raw.githubusercontent.com/evandrocoan/SublimeAmxxPawn/master/README.md",
+                "releases": [
+                    {
+                        "date": "2018-07-19 19:47:29",
+                        "git_tag": "1.0.11",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/AmxxPawn/zip/1.0.11",
+                        "version": "2018.0719.1947"
+                    }
+                ]
+            },
+            {
+                "authors": [
+                    "chipotle",
+                    "Forked by evandrocoan"
+                ],
+                "description": "No description available.",
+                "details": "https://github.com/evandrocoan/BBCode",
+                "homepage": "https://github.com/evandrocoan/BBCode",
+                "name": "BBCode",
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2017-12-04 12:24:40",
-                        "git_tag": "1.0.9",
+                        "date": "2018-02-11 23:51:22",
+                        "git_tag": "1.2.4",
                         "platforms": "*",
                         "sublime_text": ">=3126",
-                        "url": "https://codeload.github.com/evandrocoan/AmxxPawn/zip/1.0.9",
-                        "version": "2017.0204.1224"
+                        "url": "https://codeload.github.com/evandrocoan/BBCode/zip/1.2.4",
+                        "version": "2018.0211.2351"
                     }
                 ]
             },
@@ -390,31 +437,6 @@
             },
             {
                 "authors": [
-                    "Preston-Landers",
-                    "Forked by evandroforks"
-                ],
-                "description": "No description available.",
-                "details": "https://github.com/evandroforks/concurrent-log-handler",
-                "homepage": "https://github.com/evandroforks/concurrent-log-handler",
-                "issues": "https://github.com/evandroforks/concurrent-log-handler/issues",
-                "load_order": "09",
-                "name": "ConcurrentLogHandler",
-                "previous_names": [],
-                "releases": [
-                    {
-                        "base": "https://github.com/evandroforks/concurrent-log-handler",
-                        "date": "2018-03-04 22:40:55",
-                        "git_tag": "0.9.10",
-                        "platforms": "*",
-                        "sublime_text": ">=3126",
-                        "tags": true,
-                        "url": "https://codeload.github.com/evandroforks/concurrent-log-handler/zip/0.9.10",
-                        "version": "2018.0304.2240"
-                    }
-                ]
-            },
-            {
-                "authors": [
                     "evandrocoan"
                 ],
                 "description": "No description available.",
@@ -459,31 +481,6 @@
                         "tags": true,
                         "url": "https://codeload.github.com/evandrocoan/EstimatedTimeLeft/zip/1.0.5",
                         "version": "2017.0217.0219"
-                    }
-                ]
-            },
-            {
-                "authors": [
-                    "WoLpH",
-                    "Forked by evandroforks"
-                ],
-                "description": "No description available.",
-                "details": "https://github.com/evandroforks/portalocker",
-                "homepage": "https://github.com/evandroforks/portalocker",
-                "issues": "https://github.com/evandroforks/portalocker/issues",
-                "load_order": "08",
-                "name": "PortalockerFiles",
-                "previous_names": [],
-                "releases": [
-                    {
-                        "base": "https://github.com/evandroforks/portalocker",
-                        "date": "2018-04-26 20:03:16",
-                        "git_tag": "2.0.1",
-                        "platforms": "*",
-                        "sublime_text": ">=3126",
-                        "tags": true,
-                        "url": "https://codeload.github.com/evandroforks/portalocker/zip/2.0.1",
-                        "version": "2018.0426.2003"
                     }
                 ]
             }
