@@ -118,7 +118,6 @@ def plugin_loaded():
         "Default",
         "DefaultSyntax",
         "Diff",
-        "EstimatedTimeLeft",
         "FixProjectSwitchRestartBug",
         "MoveText",
         "Notepad++ Color Scheme",
