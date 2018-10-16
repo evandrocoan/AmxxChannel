@@ -80,18 +80,6 @@ def plugin_loaded():
 
     g_channelSettings['DEFAULT_PACKAGE_FILES'] = \
     [
-        ".gitignore",
-        ".no-sublime-package",
-        "Context.sublime-menu",
-        "Default.sublime-commands",
-        "Distraction Free.sublime-settings",
-        "Find Results.hidden-tmLanguage",
-        "Main.sublime-menu",
-        "platform_edit_settings.py",
-        "README.md",
-        "synced_side_bar_watcher.py",
-        "Sublime Text Settings.sublime-settings",
-        "Tab Context.sublime-menu",
     ]
 
     g_channelSettings['PACKAGES_TO_NOT_INSTALL_STABLE'] = \
