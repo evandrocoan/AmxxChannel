@@ -78,10 +78,6 @@ def plugin_loaded():
         "AmxxEditor",
     ]
 
-    g_channelSettings['DEFAULT_PACKAGE_FILES'] = \
-    [
-    ]
-
     g_channelSettings['PACKAGES_TO_NOT_INSTALL_STABLE'] = \
     [
         "User",
