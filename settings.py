@@ -96,7 +96,7 @@ def plugin_loaded():
         "BBCode",
         "ChannelManager",
         "ClearCursorsCarets",
-        "DebugTools",
+        "debugtools",
         "Default",
         "DefaultSyntax",
         "Diff",
