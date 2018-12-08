@@ -70,7 +70,7 @@ def plugin_loaded():
     g_channelSettings['FORBIDDEN_PACKAGES'] = \
     [
         "PackagesManager",
-        "ChannelManager",
+        "channelmanager",
         "Notepad++ Color Scheme",
         "OverrideUnpackedPackages",
         "AmxxPawn",
@@ -94,7 +94,7 @@ def plugin_loaded():
         "AmxxEditor",
         "AmxxPawn",
         "BBCode",
-        "ChannelManager",
+        "channelmanager",
         "ClearCursorsCarets",
         "debugtools",
         "Default",
