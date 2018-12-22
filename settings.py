@@ -80,7 +80,6 @@ def plugin_loaded():
     g_channelSettings['PACKAGES_TO_NOT_INSTALL_STABLE'] = \
     [
         "User",
-        "PackagesManager",
     ]
 
     g_channelSettings['PACKAGES_TO_NOT_INSTALL_DEVELOPMENT'] = \
