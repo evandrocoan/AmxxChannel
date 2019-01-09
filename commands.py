@@ -86,45 +86,39 @@ log( 2, "Debugging" )
 log( 2, "PACKAGE_ROOT_DIRECTORY: " + g_settings.PACKAGE_ROOT_DIRECTORY )
 
 
-class AmxxChannelExtractDefaultPackages( sublime_plugin.ApplicationCommand ):
+class DevelopmentVersionBaseCommand(sublime_plugin.ApplicationCommand):
+
+    def is_enabled(self):
+        return is_channel_installed() and is_development_version()
+
+
+class AmxxChannelExtractDefaultPackages(DevelopmentVersionBaseCommand):
 
     def run(self):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
         copy_default_package.main( True )
 
-    def is_enabled(self):
-        return is_channel_installed() and is_development_version()
 
-
-class AmxxChannelRun( sublime_plugin.ApplicationCommand ):
+class AmxxChannelRun(DevelopmentVersionBaseCommand):
 
     def run(self, command):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
         submodules_manager.main( command )
 
-    def is_enabled(self):
-        return is_channel_installed() and is_development_version()
 
-
-class AmxxChannelGenerateChannelFile( sublime_plugin.ApplicationCommand ):
+class AmxxChannelGenerateChannelFile(DevelopmentVersionBaseCommand):
 
     def run(self, command="all"):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
         channel_manager.main( g_channelSettings, command )
 
-    def is_enabled(self):
-        return is_channel_installed() and is_development_version()
 
-
-class AmxxChannelRunChannelAndSubmodules( sublime_plugin.ApplicationCommand ):
+class AmxxChannelRunChannelAndSubmodules(DevelopmentVersionBaseCommand):
 
     def run(self, command):
         sublime.active_window().run_command( "show_panel", {"panel": "console", "toggle": False} )
         channel_manager.main( g_channelSettings, command )
         submodules_manager.main( command )
-
-    def is_enabled(self):
-        return is_channel_installed() and is_development_version()
 
 
 class AmxxChannelRunInstallation( sublime_plugin.ApplicationCommand ):
