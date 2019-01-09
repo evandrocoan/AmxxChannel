@@ -121,7 +121,7 @@ class AmxxChannelRunChannelAndSubmodules(DevelopmentVersionBaseCommand):
         submodules_manager.main( command )
 
 
-class AmxxChannelRunInstallation( sublime_plugin.ApplicationCommand ):
+class AmxxChannelRunInstallation(sublime_plugin.ApplicationCommand):
 
     def run(self):
         installation_wizard.main( g_channelSettings )
@@ -130,7 +130,7 @@ class AmxxChannelRunInstallation( sublime_plugin.ApplicationCommand ):
         return not is_channel_installed()
 
 
-class AmxxChannelRunUninstallation( sublime_plugin.ApplicationCommand ):
+class AmxxChannelRunUninstallation(sublime_plugin.ApplicationCommand):
 
     def run(self):
         """
