@@ -24,8 +24,8 @@
     { "caption": "AmxxChannel: Extract Default Package",
             "command": "amxx_channel_extract_default_packages" },
 
-    { "caption": "AmxxChannel: Run Backstroke Requests",
-            "command": "amxx_channel_run", "args": {"run": "-b"} },
+    { "caption": "AmxxChannel: Merge Upstreams Locally",
+            "command": "amxx_channel_run", "args": {"run": "-m"} },
 
     { "caption": "AmxxChannel: Fetch All Submodules remote origin",
             "command": "amxx_channel_run", "args": {"run": "-fo"} },
