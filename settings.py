@@ -87,7 +87,6 @@ def plugin_loaded():
 
     g_channelSettings['PACKAGES_TO_INSTALL_EXCLUSIVELY'] = \
     [
-        "ActiveViewJumpBack",
         "AmxxChannel",
         "AmxxEditor",
         "AmxxPawn",
