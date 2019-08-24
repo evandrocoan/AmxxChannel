@@ -69,9 +69,10 @@ def plugin_loaded():
     g_channelSettings['FORBIDDEN_PACKAGES'] = \
     [
         "PackagesManager",
-        "channelmanager",
         "Notepad++ Color Scheme",
-        "OverrideUnpackedPackages",
+        "Default",
+        "RememberCommandPaletteInput",
+        "ClearCursorsCarets",
         "AmxxPawn",
         "AmxxEditor",
     ]
