@@ -107,6 +107,7 @@ def plugin_loaded():
         "OverrideUnpackedPackages",
         "PackagesManager",
         "PowerCursors",
+        "RememberCommandPaletteInput",
         "SideBySideSettings",
     ]
 

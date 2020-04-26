@@ -504,6 +504,31 @@
             },
             {
                 "authors": [
+                    "evandrocoan"
+                ],
+                "buy": null,
+                "description": "Some fixes for the Sublime Text command palette",
+                "donate": null,
+                "homepage": "https://github.com/evandrocoan/RememberCommandPaletteInput",
+                "issues": "https://github.com/evandrocoan/RememberCommandPaletteInput/issues",
+                "labels": [],
+                "last_modified": "2019-12-26 17:19:09",
+                "name": "RememberCommandPaletteInput",
+                "previous_names": [],
+                "readme": "https://raw.githubusercontent.com/evandrocoan/RememberCommandPaletteInput/master/README.md",
+                "releases": [
+                    {
+                        "date": "2019-12-26 14:19:09",
+                        "git_tag": "1.0.8",
+                        "platforms": "*",
+                        "sublime_text": ">=3126",
+                        "url": "https://codeload.github.com/evandrocoan/RememberCommandPaletteInput/zip/1.0.8",
+                        "version": "2019.1226.1419"
+                    }
+                ]
+            },
+            {
+                "authors": [
                     "jgbishop",
                     "Forked by evandrocoan"
                 ],
