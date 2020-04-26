@@ -100,6 +100,7 @@ def plugin_loaded():
         "Default",
         "DefaultSyntax",
         "Diff",
+        "FixedToggleFindPanel",
         "FixProjectSwitchRestartBug",
         "ForceRewriteSublimeSettings",
         "MoveText",
