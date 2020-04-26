@@ -16,13 +16,13 @@
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2019-12-26 14:18:09",
+                        "date": "2020-04-26 16:48:00",
                         "git_tag": "master",
                         "is_branched_tag": true,
                         "platforms": "*",
                         "sublime_text": ">=3126",
                         "url": "https://codeload.github.com/evandrocoan/AmxxChannel/zip/master",
-                        "version": "2019.1226.1418"
+                        "version": "2020.0426.1648"
                     }
                 ]
             },
@@ -150,12 +150,12 @@
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2019-12-26 14:18:25",
-                        "git_tag": "1.0.50",
+                        "date": "2020-03-28 21:47:16",
+                        "git_tag": "1.0.51",
                         "platforms": "*",
                         "sublime_text": ">3200",
-                        "url": "https://codeload.github.com/evandrocoan/SublimePackageDefault/zip/1.0.50",
-                        "version": "2019.1226.1418"
+                        "url": "https://codeload.github.com/evandrocoan/SublimePackageDefault/zip/1.0.51",
+                        "version": "2020.0328.2147"
                     },
                     {
                         "date": "2018-10-17 23:51:58",
