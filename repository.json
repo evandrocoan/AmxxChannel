@@ -3,6 +3,32 @@
     "packages": [
         {
             "authors": [
+                "germtb",
+                "Forked by evandroforks"
+            ],
+            "buy": null,
+            "description": "Sublime package for better text/code navigation by jumping paragraphs",
+            "donate": null,
+            "homepage": "https://github.com/evandroforks/AltUp",
+            "issues": "https://github.com/germtb/AltUp/issues",
+            "labels": [],
+            "last_modified": "2015-12-09 12:30:20",
+            "name": "AltUp",
+            "previous_names": [],
+            "readme": "https://raw.githubusercontent.com/germtb/AltUp/master/README.md",
+            "releases": [
+                {
+                    "date": "2019-12-26 14:18:08",
+                    "git_tag": "1.0.6",
+                    "platforms": "*",
+                    "sublime_text": ">=3126",
+                    "url": "https://codeload.github.com/evandroforks/AltUp/zip/1.0.6",
+                    "version": "2019.1226.1418"
+                }
+            ]
+        },
+        {
+            "authors": [
                 "evandrocoan"
             ],
             "description": "No description available.",
@@ -12,13 +38,13 @@
             "previous_names": [],
             "releases": [
                 {
-                    "date": "2020-04-26 16:48:00",
+                    "date": "2020-04-26 16:49:05",
                     "git_tag": "master",
                     "is_branched_tag": true,
                     "platforms": "*",
                     "sublime_text": ">=3126",
                     "url": "https://codeload.github.com/evandrocoan/AmxxChannel/zip/master",
-                    "version": "2020.0426.1648"
+                    "version": "2020.0426.1649"
                 }
             ]
         },
@@ -105,6 +131,35 @@
                     "platforms": "*",
                     "sublime_text": ">=3126",
                     "url": "https://codeload.github.com/evandrocoan/BBCode/zip/1.2.9",
+                    "version": "2019.1226.1418"
+                }
+            ]
+        },
+        {
+            "authors": [
+                "aziz",
+                "Forked by evandroforks"
+            ],
+            "buy": null,
+            "description": "Adds a couple of missing features to SublimeText 3 Find Results buffer",
+            "donate": null,
+            "homepage": "https://github.com/evandroforks/BetterFindBuffer",
+            "issues": "https://github.com/aziz/BetterFindBuffer/issues",
+            "labels": [
+                "find results",
+                "search"
+            ],
+            "last_modified": "2016-07-01 23:43:49",
+            "name": "BetterFindBuffer",
+            "previous_names": [],
+            "readme": "https://raw.githubusercontent.com/aziz/BetterFindBuffer/master/README.md",
+            "releases": [
+                {
+                    "date": "2019-12-26 14:18:15",
+                    "git_tag": "1.0.9",
+                    "platforms": "*",
+                    "sublime_text": ">=3126",
+                    "url": "https://codeload.github.com/evandroforks/BetterFindBuffer/zip/1.0.9",
                     "version": "2019.1226.1418"
                 }
             ]
@@ -247,6 +302,26 @@
                     "platforms": "*",
                     "sublime_text": ">=3126",
                     "url": "https://codeload.github.com/evandrocoan/FixProjectSwitchRestartBug/zip/1.0.17",
+                    "version": "2019.1226.1418"
+                }
+            ]
+        },
+        {
+            "authors": [
+                "evandrocoan"
+            ],
+            "description": "No description available.",
+            "details": "https://github.com/evandrocoan/ForceRewriteSublimeSettings",
+            "homepage": "https://github.com/evandrocoan/ForceRewriteSublimeSettings",
+            "name": "ForceRewriteSublimeSettings",
+            "previous_names": [],
+            "releases": [
+                {
+                    "date": "2019-12-26 14:18:35",
+                    "git_tag": "1.0.8",
+                    "platforms": "*",
+                    "sublime_text": ">=3126",
+                    "url": "https://codeload.github.com/evandrocoan/ForceRewriteSublimeSettings/zip/1.0.8",
                     "version": "2019.1226.1418"
                 }
             ]

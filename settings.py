@@ -88,10 +88,12 @@ def plugin_loaded():
 
     g_channelSettings['PACKAGES_TO_INSTALL_EXCLUSIVELY'] = \
     [
+        "AltUp",
         "AmxxChannel",
         "AmxxEditor",
         "AmxxPawn",
         "BBCode",
+        "BetterFindBuffer",
         "channelmanager",
         "ClearCursorsCarets",
         "debugtools",
@@ -99,6 +101,7 @@ def plugin_loaded():
         "DefaultSyntax",
         "Diff",
         "FixProjectSwitchRestartBug",
+        "ForceRewriteSublimeSettings",
         "MoveText",
         "Notepad++ Color Scheme",
         "OverrideCommitCompletion",
