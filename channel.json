@@ -42,13 +42,13 @@
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2020-04-26 16:49:05",
+                        "date": "2020-04-26 18:15:15",
                         "git_tag": "master",
                         "is_branched_tag": true,
                         "platforms": "*",
                         "sublime_text": ">=3126",
                         "url": "https://codeload.github.com/evandrocoan/AmxxChannel/zip/master",
-                        "version": "2020.0426.1649"
+                        "version": "2020.0426.1815"
                     }
                 ]
             },
