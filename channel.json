@@ -42,13 +42,13 @@
                 "previous_names": [],
                 "releases": [
                     {
-                        "date": "2020-04-26 18:15:15",
+                        "date": "2020-04-26 18:16:17",
                         "git_tag": "master",
                         "is_branched_tag": true,
                         "platforms": "*",
                         "sublime_text": ">=3126",
                         "url": "https://codeload.github.com/evandrocoan/AmxxChannel/zip/master",
-                        "version": "2020.0426.1815"
+                        "version": "2020.0426.1816"
                     }
                 ]
             },
@@ -109,12 +109,12 @@
                 "readme": "https://raw.githubusercontent.com/evandrocoan/AmxxPawn/master/README.md",
                 "releases": [
                     {
-                        "date": "2019-12-26 14:18:09",
-                        "git_tag": "1.0.20",
+                        "date": "2020-04-12 20:22:53",
+                        "git_tag": "1.0.21",
                         "platforms": "*",
                         "sublime_text": ">=3126",
-                        "url": "https://codeload.github.com/evandrocoan/AmxxPawn/zip/1.0.20",
-                        "version": "2019.1226.1418"
+                        "url": "https://codeload.github.com/evandrocoan/AmxxPawn/zip/1.0.21",
+                        "version": "2020.0412.2022"
                     }
                 ]
             },
